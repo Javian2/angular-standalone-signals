@@ -1,1 +1,12 @@
-<a [routerLink]="['/home']">Go to home</a>
+<main class="container">
+  <a [routerLink]="['/home']">Go to home</a>
+
+  <section class="signals">
+    <p>The count is: {{ count() }}</p>
+    <p>The double count is {{ doubleCount() }}</p>
+    <button (click)="setCount()">Set</button>
+    <button (click)="increaseCount()">+</button>
+    <button (click)="decreaseCount()">-</button>
+    <p>{{ notifyCount }}</p>
+  </section>
+</main>
