@@ -1,12 +1,24 @@
 <main class="container">
   <a [routerLink]="['/home']">Go to home</a>
 
-  <section class="signals">
+  <section class="signals-basic">
     <p>The count is: {{ count() }}</p>
     <p>The double count is {{ doubleCount() }}</p>
     <button (click)="setCount()">Set</button>
     <button (click)="increaseCount()">+</button>
     <button (click)="decreaseCount()">-</button>
     <p>{{ notifyCount }}</p>
+  </section>
+
+  <hr />
+
+  <button [disabled]="!hasMoreCharacters" (click)="onChangeCharacters()">
+    Change characters
+  </button>
+  <section class="signals">
+    <div class="signals-character" *ngFor="let character of characters">
+      <img [src]="character.image" alt="" />
+      <span>{{ character.name }}</span>
+    </div>
   </section>
 </main>
