@@ -23,7 +23,6 @@ The project has been configured using the following tools:
 
 - Angular 16
 - Typescript
-- Sass
 - Tailwindcss
 - Prettier
 - Eslint
